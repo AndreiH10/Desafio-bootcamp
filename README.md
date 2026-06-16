@@ -133,7 +133,6 @@ Esses pontos representam oportunidades para aumentar a cobertura e testar mais p
 ## Referências
 
 - Plano de testes: `PLANO-DE-TESTES.md`
-- Relatório de bugs: `BUG_REPORT.md`
 
 ---
 
