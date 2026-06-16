@@ -13,7 +13,7 @@ O objetivo é validar a API ServeRest por meio de testes de aceitação e verifi
 
 ## Estrutura do Repositório
 
-- `tests/test_a.py` - suíte de testes principal
+- `tests/test_api_compass.py` - suíte de testes principal
 - `PLANO-DE-TESTES.md` - plano de testes completo
 
 ## Requisitos
@@ -41,19 +41,19 @@ python -m pip install requests pytest pytest-cov
 ### Executar toda a suíte
 
 ```bash
-pytest tests/test_a.py -v
+pytest tests/test_api_compass.py -v
 ```
 
 ### Executar um teste específico
 
 ```bash
-pytest tests/test_a.py::TestLogin::test_login -v
+pytest tests/test_api_compass.py::TestLogin::test_login -v
 ```
 
 ### Executar cobertura
 
 ```bash
-pytest --cov=tests --cov-report=term-missing tests/test_a.py -q
+pytest --cov=tests --cov-report=term-missing tests/test_api_compass.py -q
 ```
 
 ## Metodologia de cobertura
@@ -63,7 +63,7 @@ A cobertura foi calculada com `pytest-cov` usando a métrica de cobertura de ins
 Comando utilizado:
 
 ```bash
-pytest --cov=tests --cov-report=term-missing tests/test_a.py -q
+pytest --cov=tests --cov-report=term-missing tests/test_api_compass.py -q
 ```
 
 ## Resultado de cobertura
@@ -91,13 +91,13 @@ Os seguintes cenários ainda não estão cobertos pela suíte atual:
 
 - caminhos alternativos de falha em `criar_login()` e `obter_token_administrador()`, como retries por `503` ou falha de criação de usuário
 - caminho de retry de `criar_produto_com_token()` para `401` e `503` quando a API está instável
-- `excluir_produto()` no arquivo `tests/test_a.py` não está executado porque o método não começa com `test_`
+- `excluir_produto()` no arquivo `tests/test_api_compass.py` não está executado porque o método não começa com `test_`
 - exclusão de produto via API com token de administrador
 - validação de nome duplicado para produtos
 
 Esses pontos representam oportunidades para aumentar a cobertura e testar mais profundamente o comportamento de falha da API.
 
-## Organização dos testes em `tests/test_a.py`
+## Organização dos testes em `tests/test_api_compass.py`
 
 - `TestUsuarioCadastro`
   - `test_get_users`
@@ -126,7 +126,7 @@ Esses pontos representam oportunidades para aumentar a cobertura e testar mais p
 
 ## Notas adicionais
 
-- `tests/test_a.py` usa `requests` para executar chamadas reais à API.
+- `tests/test_api_compass.py` usa `requests` para executar chamadas reais à API.
 - A suite valida tanto fluxos de sucesso quanto casos de erro esperados.
 - A cobertura pode ser estendida adicionando testes para exclusão de produto, criação de carrinho e comportamento de produto duplicado.
 

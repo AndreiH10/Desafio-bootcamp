@@ -136,25 +136,25 @@ Taxa de Cobertura: 100% dos endpoints principais
 
 ### Todos os testes
 ```bash
-pytest tests/test_a.py -v
+pytest tests/test_api_compass.py -v
 ```
 
 ### Testes específicos
 ```bash
-pytest tests/test_a.py -k "login" -v
-pytest tests/test_a.py::TestProduto -v
-pytest tests/test_a.py::TestProduto::test_cadastrar_produto_com_token -v
+pytest tests/test_api_compass.py -k "login" -v
+pytest tests/test_api_compass.py::TestProduto -v
+pytest tests/test_api_compass.py::TestProduto::test_cadastrar_produto_com_token -v
 ```
 
 ### Com relatório detalhado
 ```bash
-pytest tests/test_a.py -v --tb=short
-pytest tests/test_a.py -v --tb=long
+pytest tests/test_api_compass.py -v --tb=short
+pytest tests/test_api_compass.py -v --tb=long
 ```
 
 ### Com cobertura
 ```bash
-pytest tests/test_a.py --cov=. --cov-report=html
+pytest tests/test_api_compass.py --cov=. --cov-report=html
 ```
 
 ---
